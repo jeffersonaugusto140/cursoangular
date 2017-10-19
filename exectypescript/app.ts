@@ -1,15 +1,8 @@
-let test: string = "Teste TS......."
+import {Sandero} from './sandero'
+import {Celta} from './celta'
 
-console.log(test)
+var san = new Sandero()
+var cel = new Celta()
 
-let ep: number = 1
-
-console.log(ep)
-
-ep++
-
-console.log(ep)
-
-let qqercoisa
-qqercoisa = 'asdf ' + 50
-console.log(qqercoisa)
+san.andar()
+cel.andar()
