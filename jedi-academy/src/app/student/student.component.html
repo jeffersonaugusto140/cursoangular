@@ -1,0 +1,9 @@
+<div>
+  Student: {{name}}
+  <div [hidden]="!isApproved">
+    <span>Approved!</span>
+  </div>
+  <div [hidden]="isApproved">
+      <span>Reproved!</span>
+    </div>
+</div>
