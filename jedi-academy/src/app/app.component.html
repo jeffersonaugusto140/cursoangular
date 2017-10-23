@@ -5,6 +5,5 @@
   </jad-header>
 </div>
 <div id="content">
-    <jad-student></jad-student>
-    <jad-student></jad-student>
+  <jad-student *ngFor="let student of students" [student]='student'></jad-student>
 </div>

@@ -1,9 +1,10 @@
 <div>
-  Student: {{name}}
-  <div [hidden]="!isApproved">
-    <span>Approved!</span>
+  Student: {{student.name}}
+
+  <div *ngIf="student.isApproved">
+      <span>Approved!</span>
   </div>
-  <div [hidden]="isApproved">
+  <div *ngIf="!student.isApproved">
       <span>Reproved!</span>
     </div>
 </div>
