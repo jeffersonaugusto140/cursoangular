@@ -1,10 +1,17 @@
-<div>
-  Student: {{student.name}}
+<div *ngIf="student">
+  Student: <a (click)="clicked()" style=""> {{student?.name}} </a> 
 
   <div *ngIf="student.isApproved">
       <span>Approved!</span>
   </div>
   <div *ngIf="!student.isApproved">
-      <span>Reproved!</span>
+      <div>
+        <span>Reproved!</span>
+        <button (click)="description.focus()">Focus textarea...</button>
+      </div>
+      <textarea #description></textarea>
     </div>
+</div>
+<div *ngIf="!student">
+    <span>Sem dados!</span>
 </div>

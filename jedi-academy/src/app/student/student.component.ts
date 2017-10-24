@@ -16,4 +16,8 @@ export class StudentComponent implements OnInit {
 
   @Input() student: Student
 
+  clicked(){
+    console.log(`Student: ${this.student.name}`)
+  }
+
 }
