@@ -23,6 +23,12 @@ var RestaurantsService = /** @class */ (function () {
             .map(function (response) { return response.json(); })
             .catch(ErrorHandler.handleError);
     };
+    RestaurantsService.prototype.restaurantById = function (id) {
+        return this.http
+            .get(MEAT_API + "/restaurants/" + id)
+            .map(function (response) { return response.json(); })
+            .catch(ErrorHandler.handleError);
+    };
     RestaurantsService = __decorate([
         Injectable(),
         __metadata("design:paramtypes", [Http])
