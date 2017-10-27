@@ -15,6 +15,11 @@ import { HomeComponent } from '../app/home/home.component';
 import { AboutComponent } from '../app/about/about.component';
 import { RestaurantsComponent } from '../app/restaurants/restaurants.component';
 import { RestaurantComponent } from '../app/restaurants/restaurant/restaurant.component';
+import { RestaurantsService } from '../app/restaurants/restaurants.service';
+import { RestaurantDetailComponent } from '../app/restaurant-detail/restaurant-detail.component';
+import { MenuComponent } from '../app/restaurant-detail/menu/menu.component';
+import { ShoppingCartComponent } from '../app/restaurant-detail/shopping-cart/shopping-cart.component';
+import { MenuItemComponent } from '../app/restaurant-detail/menu-item/menu-item.component';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -26,14 +31,18 @@ var AppModule = /** @class */ (function () {
                 HomeComponent,
                 AboutComponent,
                 RestaurantsComponent,
-                RestaurantComponent
+                RestaurantComponent,
+                RestaurantDetailComponent,
+                MenuComponent,
+                ShoppingCartComponent,
+                MenuItemComponent
             ],
             imports: [
                 BrowserModule,
                 HttpModule,
                 RouterModule.forRoot(ROUTES)
             ],
-            providers: [],
+            providers: [RestaurantsService],
             bootstrap: [AppComponent]
         })
     ], AppModule);
