@@ -5,6 +5,14 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+
+    "baseUrl": "src",
+    "paths":{
+      "@mtapp/*": ["app/*"],
+      "@viewsRestaurant/*": ["app/restaurants/*"],
+      "@env/*": ["environments/*"]
+    },
+
     "lib": [
       "es2016",
       "dom"
