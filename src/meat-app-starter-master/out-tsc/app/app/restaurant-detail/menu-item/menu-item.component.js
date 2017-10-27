@@ -7,12 +7,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 var MenuItemComponent = /** @class */ (function () {
     function MenuItemComponent() {
+        this.add = new EventEmitter();
     }
     MenuItemComponent.prototype.ngOnInit = function () {
     };
+    MenuItemComponent.prototype.emitAddEvent = function () {
+        this.add.emit(this.menuItem);
+    };
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], MenuItemComponent.prototype, "menuItem", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], MenuItemComponent.prototype, "add", void 0);
     MenuItemComponent = __decorate([
         Component({
             selector: 'mt-menu-item',
